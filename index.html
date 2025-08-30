@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafana-Inspired To-Do</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
+    <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+    <link href="[https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap)" rel="stylesheet">
+</head>
+<body class="bg-gray-800 text-gray-200 font-inter">
+    <div class="container">
+        <!-- Main application card -->
+        <div class="card">
+            <h1 class="card-title">My To-Do List</h1>
+            <!-- Input and Add button area -->
+            <div class="input-group">
+                <input type="text" id="task-input" placeholder="Add a new task..." class="input-field">
+                <button id="add-task-btn" class="btn btn-add">Add</button>
+            </div>
+            <!-- To-do list container -->
+            <ul id="task-list" class="task-list">
+                <!-- Task items will be dynamically added here by JavaScript -->
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

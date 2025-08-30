@@ -1,0 +1,153 @@
+/*
+    Grafana-inspired color palette:
+    --bg-color: #202226; (Dark charcoal background)
+    --card-bg: #2d2e33; (Slightly lighter grey for cards/containers)
+    --text-color: #d1d2d3; (Light grey for text)
+    --accent-blue: #007bff; (Vibrant blue for primary actions)
+    --accent-green: #2ecc71; (Green for completed tasks)
+    --accent-red: #e74c3c; (Red for delete buttons)
+    --border-color: #3f414a; (Darker grey for borders/dividers)
+*/
+
+:root {
+    --bg-color: #202226;
+    --card-bg: #2d2e33;
+    --text-color: #d1d2d3;
+    --accent-blue: #007bff;
+    --accent-green: #2ecc71;
+    --accent-red: #e74c3c;
+    --border-color: #3f414a;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--accent-blue);
+}
+
+.input-group {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    background-color: transparent;
+    color: var(--text-color);
+    border-radius: 8px 0 0 8px;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.input-field::placeholder {
+    color: #8c8d96;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 0 8px 8px 0;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-add {
+    background-color: var(--accent-blue);
+    color: white;
+}
+
+.btn-add:hover {
+    background-color: #0056b3;
+}
+
+.task-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.task-item.completed {
+    background-color: #3a413d;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.task-checkbox {
+    margin-right: 15px;
+    cursor: pointer;
+    min-width: 20px;
+    min-height: 20px;
+    accent-color: var(--accent-blue);
+}
+
+.task-text {
+    flex-grow: 1;
+    font-size: 1.1rem;
+    word-break: break-word;
+}
+
+.delete-btn {
+    background-color: var(--accent-red);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
